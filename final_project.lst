@@ -1,0 +1,594 @@
+SQL> select * from StoreCustomer;
+
+    CUSTID NAME                                                                 
+---------- --------------------------------------------------                   
+PHONE_EMAIL                                        STREET                       
+-------------------------------------------------- --------------------         
+CITY                 ST        ZIP     ISGOLD DATEJOINE                         
+-------------------- -- ---------- ---------- ---------                         
+     12345 Chelsea Fernandes                                                    
+5101234567                                         Roselle Cmn                  
+Fremont              CA      94536          1 06-AUG-18                         
+                                                                                
+     67890 Laurynn Diby                                                         
+4081236547                                         500 El Camino Real           
+Santa Clara          CA      95051          1 22-JUN-19                         
+
+    CUSTID NAME                                                                 
+---------- --------------------------------------------------                   
+PHONE_EMAIL                                        STREET                       
+-------------------------------------------------- --------------------         
+CITY                 ST        ZIP     ISGOLD DATEJOINE                         
+-------------------- -- ---------- ---------- ---------                         
+                                                                                
+     34567 Shreya Venkatesh                                                     
+svenkatesh@scu.edu                                 123 Main St.                 
+Stockton             CA      94237          0 11-NOV-19                         
+                                                                                
+
+SQL> select * from StoreItem;
+
+    ITEMID      PRICE       ISBN                                                
+---------- ---------- ----------                                                
+TITLE                                              PUBLISHED  NUMCOPIES T_S     
+-------------------------------------------------- --------- ---------- ---     
+         1          5                                                           
+Percy Jackson                                      01-AUG-13         45         
+                                                                                
+         2         12                                                           
+Winnie the Pooh                                    12-FEB-46         90         
+                                                                                
+         3         10                                                           
+T-Shirt                                                             100 S       
+                                                                                
+
+    ITEMID      PRICE       ISBN                                                
+---------- ---------- ----------                                                
+TITLE                                              PUBLISHED  NUMCOPIES T_S     
+-------------------------------------------------- --------- ---------- ---     
+         5         12                                                           
+T-Shirt                                                              95 M       
+                                                                                
+         7         35                                                           
+T-Shirt                                                             100 L       
+                                                                                
+         6        106                                                           
+T-Shirt                                                             100 XL      
+                                                                                
+
+    ITEMID      PRICE       ISBN                                                
+---------- ---------- ----------                                                
+TITLE                                              PUBLISHED  NUMCOPIES T_S     
+-------------------------------------------------- --------- ---------- ---     
+         8        106                                                           
+T-Shirt                                                             100 XXL     
+                                                                                
+         4        200                                                           
+Chemistry                                          21-MAR-09         70         
+                                                                                
+
+8 rows selected.
+
+SQL> select * from ItemOrdered;
+
+ORDERID                  CUSTID     ITEMID ORDERDATE        QTY SHIPPEDDA       
+-------------------- ---------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1234505-DEC-196           12345          2 05-DEC-19          1 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-197           12345          2 05-DEC-19         12 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-198           12345          2 05-DEC-19         10 07-DEC-19       
+          0                                                                     
+                                                                                
+
+ORDERID                  CUSTID     ITEMID ORDERDATE        QTY SHIPPEDDA       
+-------------------- ---------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1234505-DEC-198           12345          5 05-DEC-19          5 07-DEC-19       
+          0                                                                     
+                                                                                
+1234506-DEC-190           12345          1 06-DEC-19          5                 
+          0                                                                     
+                                                                                
+1234508-DEC-190           12345          4 08-DEC-19          5                 
+          0                                                                     
+                                                                                
+
+ORDERID                  CUSTID     ITEMID ORDERDATE        QTY SHIPPEDDA       
+-------------------- ---------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1234505-DEC-192           12345          8 05-DEC-19          1 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-193           12345          5 05-DEC-19          1 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-193           12345          4 05-DEC-19          2 07-DEC-19       
+          0                                                                     
+                                                                                
+
+ORDERID                  CUSTID     ITEMID ORDERDATE        QTY SHIPPEDDA       
+-------------------- ---------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1234505-DEC-190           12345          6 05-DEC-19          1 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-190           12345          1 05-DEC-19          1 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-190           12345          2 05-DEC-19          3 07-DEC-19       
+          0                                                                     
+                                                                                
+
+ORDERID                  CUSTID     ITEMID ORDERDATE        QTY SHIPPEDDA       
+-------------------- ---------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1234505-DEC-190           12345          3 05-DEC-19          2 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-191           12345          3 05-DEC-19          2 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-192           12345          1 05-DEC-19          1 07-DEC-19       
+          0                                                                     
+                                                                                
+
+ORDERID                  CUSTID     ITEMID ORDERDATE        QTY SHIPPEDDA       
+-------------------- ---------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1234505-DEC-194           12345          7 05-DEC-19          1 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-195           12345          4 05-DEC-19          3 07-DEC-19       
+          0                                                                     
+                                                                                
+3456705-DEC-190           34567          2 05-DEC-19          3 07-DEC-19       
+          0                                                                     
+                                                                                
+
+18 rows selected.
+
+SQL> select * from Cart;
+
+no rows selected
+
+SQL> exec addToCart(2, 34567, 3);
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from Cart;
+
+    ITEMID     CUSTID        QTY                                                
+---------- ---------- ----------                                                
+         2      34567          3                                                
+
+SQL> exec addToCart(1, 34567, 5);
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from Cart;
+
+    ITEMID     CUSTID        QTY                                                
+---------- ---------- ----------                                                
+         2      34567          3                                                
+         1      34567          5                                                
+
+SQL> exec addToCart(2, 34567, 7);
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from Cart;
+
+    ITEMID     CUSTID        QTY                                                
+---------- ---------- ----------                                                
+         2      34567         10                                                
+         1      34567          5                                                
+
+SQL> exec addItemOrder(34567);
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from Cart;
+
+no rows selected
+
+SQL> select * from ItemOrdered;
+
+ORDERID                  CUSTID     ITEMID ORDERDATE        QTY SHIPPEDDA       
+-------------------- ---------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1234505-DEC-196           12345          2 05-DEC-19          1 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-197           12345          2 05-DEC-19         12 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-198           12345          2 05-DEC-19         10 07-DEC-19       
+          0                                                                     
+                                                                                
+
+ORDERID                  CUSTID     ITEMID ORDERDATE        QTY SHIPPEDDA       
+-------------------- ---------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1234505-DEC-198           12345          5 05-DEC-19          5 07-DEC-19       
+          0                                                                     
+                                                                                
+1234506-DEC-190           12345          1 06-DEC-19          5                 
+          0                                                                     
+                                                                                
+1234508-DEC-190           12345          4 08-DEC-19          5                 
+          0                                                                     
+                                                                                
+
+ORDERID                  CUSTID     ITEMID ORDERDATE        QTY SHIPPEDDA       
+-------------------- ---------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+3456708-DEC-190           34567          2 08-DEC-19         10                 
+         10                                                                     
+                                                                                
+3456708-DEC-190           34567          1 08-DEC-19          5                 
+         10                                                                     
+                                                                                
+1234505-DEC-192           12345          8 05-DEC-19          1 07-DEC-19       
+          0                                                                     
+                                                                                
+
+ORDERID                  CUSTID     ITEMID ORDERDATE        QTY SHIPPEDDA       
+-------------------- ---------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1234505-DEC-193           12345          5 05-DEC-19          1 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-193           12345          4 05-DEC-19          2 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-190           12345          6 05-DEC-19          1 07-DEC-19       
+          0                                                                     
+                                                                                
+
+ORDERID                  CUSTID     ITEMID ORDERDATE        QTY SHIPPEDDA       
+-------------------- ---------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1234505-DEC-190           12345          1 05-DEC-19          1 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-190           12345          2 05-DEC-19          3 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-190           12345          3 05-DEC-19          2 07-DEC-19       
+          0                                                                     
+                                                                                
+
+ORDERID                  CUSTID     ITEMID ORDERDATE        QTY SHIPPEDDA       
+-------------------- ---------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1234505-DEC-191           12345          3 05-DEC-19          2 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-192           12345          1 05-DEC-19          1 07-DEC-19       
+          0                                                                     
+                                                                                
+1234505-DEC-194           12345          7 05-DEC-19          1 07-DEC-19       
+          0                                                                     
+                                                                                
+
+ORDERID                  CUSTID     ITEMID ORDERDATE        QTY SHIPPEDDA       
+-------------------- ---------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1234505-DEC-195           12345          4 05-DEC-19          3 07-DEC-19       
+          0                                                                     
+                                                                                
+3456705-DEC-190           34567          2 05-DEC-19          3 07-DEC-19       
+          0                                                                     
+                                                                                
+
+20 rows selected.
+
+SQL> @b
+
+Trigger created.
+
+No errors.
+SQL> Update StoreCustomer set isGold = 1 where custid = 34567;
+
+1 row updated.
+
+SQL> select * from StoreCustomer;
+
+    CUSTID NAME
+---------- --------------------------------------------------
+PHONE_EMAIL					   STREET
+-------------------------------------------------- --------------------
+CITY		     ST        ZIP     ISGOLD DATEJOINE
+-------------------- -- ---------- ---------- ---------
+     12345 Chelsea Fernandes
+5101234567					   Roselle Cmn
+Fremont 	     CA      94536	    1 06-AUG-18
+
+     67890 Laurynn Diby
+4081236547					   500 El Camino Real
+Santa Clara	     CA      95051	    1 22-JUN-19
+
+    CUSTID NAME
+---------- --------------------------------------------------
+PHONE_EMAIL					   STREET
+-------------------------------------------------- --------------------
+CITY		     ST        ZIP     ISGOLD DATEJOINE
+-------------------- -- ---------- ---------- ---------
+
+     34567 Shreya Venkatesh
+svenkatesh@scu.edu				   123 Main St.
+Stockton	     CA      94237	    1 11-NOV-19
+
+
+SQL> Select * from ItemOrdered;
+
+ORDERID 		 CUSTID     ITEMID ORDERDATE	    QTY SHIPPEDDA
+-------------------- ---------- ---------- --------- ---------- ---------
+SHIPPINGFEE
+-----------
+1234505-DEC-196 	  12345 	 2 05-DEC-19	      1 07-DEC-19
+	  0
+
+1234505-DEC-197 	  12345 	 2 05-DEC-19	     12 07-DEC-19
+	  0
+
+1234505-DEC-198 	  12345 	 2 05-DEC-19	     10 07-DEC-19
+	  0
+
+
+ORDERID 		 CUSTID     ITEMID ORDERDATE	    QTY SHIPPEDDA
+-------------------- ---------- ---------- --------- ---------- ---------
+SHIPPINGFEE
+-----------
+1234505-DEC-198 	  12345 	 5 05-DEC-19	      5 07-DEC-19
+	  0
+
+1234506-DEC-190 	  12345 	 1 06-DEC-19	      5
+	  0
+
+1234508-DEC-190 	  12345 	 4 08-DEC-19	      5
+	  0
+
+
+ORDERID 		 CUSTID     ITEMID ORDERDATE	    QTY SHIPPEDDA
+-------------------- ---------- ---------- --------- ---------- ---------
+SHIPPINGFEE
+-----------
+3456708-DEC-190 	  34567 	 2 08-DEC-19	     10
+	  0
+
+3456708-DEC-190 	  34567 	 1 08-DEC-19	      5
+	  0
+
+1234505-DEC-192 	  12345 	 8 05-DEC-19	      1 07-DEC-19
+	  0
+
+
+ORDERID 		 CUSTID     ITEMID ORDERDATE	    QTY SHIPPEDDA
+-------------------- ---------- ---------- --------- ---------- ---------
+SHIPPINGFEE
+-----------
+1234505-DEC-193 	  12345 	 5 05-DEC-19	      1 07-DEC-19
+	  0
+
+1234505-DEC-193 	  12345 	 4 05-DEC-19	      2 07-DEC-19
+	  0
+
+1234505-DEC-190 	  12345 	 6 05-DEC-19	      1 07-DEC-19
+	  0
+
+
+ORDERID 		 CUSTID     ITEMID ORDERDATE	    QTY SHIPPEDDA
+-------------------- ---------- ---------- --------- ---------- ---------
+SHIPPINGFEE
+-----------
+1234505-DEC-190 	  12345 	 1 05-DEC-19	      1 07-DEC-19
+	  0
+
+1234505-DEC-190 	  12345 	 2 05-DEC-19	      3 07-DEC-19
+	  0
+
+1234505-DEC-190 	  12345 	 3 05-DEC-19	      2 07-DEC-19
+	  0
+
+
+ORDERID 		 CUSTID     ITEMID ORDERDATE	    QTY SHIPPEDDA
+-------------------- ---------- ---------- --------- ---------- ---------
+SHIPPINGFEE
+-----------
+1234505-DEC-191 	  12345 	 3 05-DEC-19	      2 07-DEC-19
+	  0
+
+1234505-DEC-192 	  12345 	 1 05-DEC-19	      1 07-DEC-19
+	  0
+
+1234505-DEC-194 	  12345 	 7 05-DEC-19	      1 07-DEC-19
+	  0
+
+
+ORDERID 		 CUSTID     ITEMID ORDERDATE	    QTY SHIPPEDDA
+-------------------- ---------- ---------- --------- ---------- ---------
+SHIPPINGFEE
+-----------
+1234505-DEC-195 	  12345 	 4 05-DEC-19	      3 07-DEC-19
+	  0
+
+3456705-DEC-190 	  34567 	 2 05-DEC-19	      3 07-DEC-19
+	  0
+
+20 rows selected.
+
+SQL> exec setShippingDate('3456708-DEC-190');
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from ItemOrdered where orderid = '3456708-DEC-190';
+
+ORDERID 		 CUSTID     ITEMID ORDERDATE	    QTY SHIPPEDDA
+-------------------- ---------- ---------- --------- ---------- ---------
+SHIPPINGFEE
+-----------
+3456708-DEC-190 	  34567 	 1 08-DEC-19	      5 10-DEC-19
+	  0
+
+3456708-DEC-190 	  34567 	 2 08-DEC-19	     10 10-DEC-19
+	  0
+
+
+SQL> select OrderTotal('3456708-DEC-190') from dual;
+
+ORDERTOTAL('3456708-DEC-190')
+-----------------------------
+		       137.03
+
+SQL> exec OrderedAfter(34567, '06-DEC-19');
+
+PL/SQL procedure successfully completed.
+
+SQL> set serveroutput on;
+SQL> exec OrderedAfter(34567, '06-DEC-19');
+Customer ID: 34567 Name: Shreya Venkatesh Phone/Email: svenkatesh@scu.edu
+Address: 123 Main St., Stockton, CA 94237
+Order Details of Order 3456708-DEC-190
+Item ID: 1
+Name: Percy Jackson
+Price: 5
+Quantity ordered: 5
+Item ID: 2
+Name: Winnie the Pooh
+Price: 12
+Quantity ordered: 10
+This was ordered on 08-DEC-19
+Shipping date was scheduled for 10-DEC-19
+Payment Details of Order 3456708-DEC-190
+Total of all items: $145
+Total Discount: $14.5
+Tax: $6.53
+Shipping Fee: $0
+Grand Total: $137.03
+
+PL/SQL procedure successfully completed.
+
+SQL> exec OrderedAfter(34567, '08-DEC-19');
+Customer ID: 34567 Name: Shreya Venkatesh Phone/Email: svenkatesh@scu.edu
+Address: 123 Main St., Stockton, CA 94237
+Order Details of Order 3456708-DEC-190
+Item ID: 1
+Name: Percy Jackson
+Price: 5
+Quantity ordered: 5
+Item ID: 2
+Name: Winnie the Pooh
+Price: 12
+Quantity ordered: 10
+This was ordered on 08-DEC-19
+Shipping date was scheduled for 10-DEC-19
+Payment Details of Order 3456708-DEC-190
+Total of all items: $145
+Total Discount: $14.5
+Tax: $6.53
+Shipping Fee: $0
+Grand Total: $137.03
+
+PL/SQL procedure successfully completed.
+
+SQL> exec OrderedAfter(34567, '06-DEC-20');
+Customer ID: 34567 Name: Shreya Venkatesh Phone/Email: svenkatesh@scu.edu
+Address: 123 Main St., Stockton, CA 94237
+
+PL/SQL procedure successfully completed.
+
+SQL> exec OrderedAfter(12345,'06-DEC-19'); 
+Customer ID: 12345 Name: Chelsea Fernandes Phone/Email: 5101234567 Address:
+Roselle Cmn, Fremont, CA 94536
+Order Details of Order 1234506-DEC-190
+Item ID: 1
+Name: Percy Jackson
+Price: 5
+Quantity ordered: 5
+This was ordered on 06-DEC-19
+Shipping Date has not been set yet
+Payment Details of Order 1234506-DEC-190
+Total of all items: $25
+Total Discount: $0
+Tax: $1.25
+Shipping Fee: $0
+Grand Total: $26.25
+Order Details of Order 1234508-DEC-190
+Item ID: 4
+Name: Chemistry
+Price: 200
+Quantity ordered: 5
+This was ordered on 08-DEC-19
+Shipping Date has not been set yet
+Payment Details of Order 1234508-DEC-190
+Total of all items: $1000
+Total Discount: $100
+Tax: $45
+Shipping Fee: $0
+Grand Total: $945
+
+PL/SQL procedure successfully completed.
+
+SQL> exec makeReport(12345,'06-DEC-19');
+Customer ID: 12345 Name: Chelsea Fernandes Phone/Email: 5101234567 Address:
+Roselle Cmn, Fremont, CA 94536
+Order Details of Order 1234506-DEC-190
+Item ID: 1
+Name: Percy Jackson
+Price: 5
+Quantity ordered: 5
+This was ordered on 06-DEC-19
+Shipping Date has not been set yet
+Payment Details of Order 1234506-DEC-190
+Total of all items: $25
+Total Discount: $0
+Tax: $1.25
+Shipping Fee: $0
+Grand Total: $26.25
+Order Details of Order 1234508-DEC-190
+Item ID: 4
+Name: Chemistry
+Price: 200
+Quantity ordered: 5
+This was ordered on 08-DEC-19
+Shipping Date has not been set yet
+Payment Details of Order 1234508-DEC-190
+Total of all items: $1000
+Total Discount: $100
+Tax: $45
+Shipping Fee: $0
+Grand Total: $945
+Please type @OrderReport in command line to create/update an OrderReport.txt
+file with up to date information about Customer 12345's purchases after
+06-DEC-19
+
+PL/SQL procedure successfully completed.
+
+SQL> @OrderReport
+
+TODAY
+------------------
+December 8, 2019
+
+SQL> spool off;
+
+
+

@@ -1,0 +1,18 @@
+SQL> @b
+
+Trigger created.
+
+No errors.
+SQL> Update StoreCustomer set isGold = 1 where custid = 34567;
+Update StoreCustomer set isGold = 1 where custid = 34567
+       *
+ERROR at line 1:
+ORA-04091: table LDIBY.STORECUSTOMER is mutating, trigger/function may not see 
+it 
+ORA-06512: at "LDIBY.CUSTTYPE_TRIG", line 5 
+ORA-06512: at "LDIBY.CUSTTYPE_TRIG", line 8 
+ORA-04088: error during execution of trigger 'LDIBY.CUSTTYPE_TRIG' 
+
+
+SQL> 
+SQL> 

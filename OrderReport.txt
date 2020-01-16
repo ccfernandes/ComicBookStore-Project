@@ -1,0 +1,153 @@
+
+                                                                                     Order Report   December 8, 2019                                                                                    
+                                                                                                                                                                                                        
+    CUSTID NAME                                               PHONE_EMAIL                                        STREET               CITY                 ST        ZIP                                
+---------- -------------------------------------------------- -------------------------------------------------- -------------------- -------------------- -- ----------                                
+     12345 Chelsea Fernandes                                  5101234567                                         Roselle Cmn          Fremont              CA      94536                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                               Laurynn Diby  Fernandes COEN 178 Project-7                                                                               
+
+
+                                                                                     Order Report   December 8, 2019                                                                                    
+                                                                                                                                                                                                        
+ORDERID                  CUSTID     ITEMID ORDERDATE        QTY SHIPPEDDA      PRICE TITLE                                                                                                              
+-------------------- ---------- ---------- --------- ---------- --------- ---------- --------------------------------------------------                                                                 
+1234506-DEC-190           12345          1 06-DEC-19          5                    5 Percy Jackson                                                                                                      
+1234508-DEC-190           12345          4 08-DEC-19          5                  200 Chemistry                                                                                                          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                               Laurynn Diby  Fernandes COEN 178 Project-7                                                                               
+
+
+                                                                                     Order Report   December 8, 2019                                                                                    
+                                                                                                                                                                                                        
+ORDERID                  CUSTID   SUBTOTAL GRANDTOTAL        TAX   DISCOUNT SHIPPINGFEE ORDERDATE                                                                                                       
+-------------------- ---------- ---------- ---------- ---------- ---------- ----------- ---------                                                                                                       
+1234506-DEC-190           12345         25      26.25       1.25          0           0 06-DEC-19                                                                                                       
+1234508-DEC-190           12345        900        945         45        100           0 08-DEC-19                                                                                                       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                               Laurynn Diby  Fernandes COEN 178 Project-7                                                                               
+
