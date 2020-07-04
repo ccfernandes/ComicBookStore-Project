@@ -3,6 +3,8 @@
 The project is simulation of an online comic book store. 
 Final project for COEN 178 (Databases) at Santa Clara University
 
+Try it out: [Bookstore Website Simulation](http://linux.students.engr.scu.edu/~ldiby/index.php)
+
 ## Functionality 
 
 There are several functions that the website can do: 
