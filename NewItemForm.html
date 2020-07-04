@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>New Item Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <!-- <script type="addNewItem/javascript" src="addNewItem.js"></script> -->
+</head>
+<style>
+    input[type=text] {
+        width: 25%;
+        padding: 6px 20px;
+        box-sizing: border-box;
+    }
+    h1{
+        background: #EEDFCC;
+    }
+    h1,h2,h3{
+        text-align: center;
+    }
+    .top{
+        background: #EEDFCC;
+        text-align: center;
+    }
+    .display{
+        text-align: left;
+        border-style: solid;
+        /*width: 100%;*/
+        padding: 12px 20px;
+        margin: 8px 0;
+        background: #CBD4D6;
+    }
+    .itemType{
+        background-color: #ccdbee;
+        padding: 12px 20px;
+        margin: 8px 0;
+    }
+    .forms{
+        text-align: left;
+        background-color: #EEDFCC;
+        /*width: 100%;*/
+        padding: 12px 20px;
+        margin: 8px 0;
+        /*box-sizing: border-box;*/
+    }
+    .button{
+      background: #D4D6CB;
+      border-style: solid;
+      border-color: #83989F;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+</style>
+<body>
+
+    <!-- Add the correct path to the file addMovieReview.php -->
+
+    <!-- note the action url -->
+    <div class="top">
+        <h1>The LC Store</h1>
+        <div class="button">
+            <a href='main.html'>Home Page</a>
+        </div>
+    </div>
+
+    <div class="display">
+        <h3>Display list of items here: </h3>
+        <p>Comic books (itemid, title, numcopies avail)</p>
+        <p>T-shirts (itemid, title, size)</p>
+    </div>
+    
+    <div class="itemType">
+        <h4>Select the checkbox for the item type you would like to add to the store:</h4>
+        <p>
+            <input type="checkbox" value="comic book form" id="book_form">
+            <label for="book_form">Comic Book</label>
+        </p>
+        <p>
+            <input type="checkbox" value="shirt form" id="shirt_form">
+            <label for="shirt_form">T shirt</label>
+        </p>
+    </div>
+    
+    <!-- the form -->
+    <form id="bookform" class="forms" method="post" action="http://...addNewbook.php">
+        <h2>Add a New Comic Book to Inventory</h2>
+        <p>
+            <label for="id">ID:</label>
+            <input type="text" name="id" id="id">
+        </p>
+        <p>
+            <label for="price">price:</label>
+            <input type="text" name="price" id="price">
+        </p>
+        <p>
+            <label for="numcopies">Number of Copies:</label>
+            <input type="text" name="numcopies" id="numcopies">
+        </p>
+        <p>
+            <label for="publishedDate">Published Date:</label>
+            <input type="text" name="publishedDate" id="publishedDate">
+        </p>
+        <p>
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title">
+        </p>
+        <p>
+            <label for="isbn">ISBN:</label>
+            <input type="text" name="isbn" id="isbn">
+        </p>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <form id="shirtform" class="forms" method="post" action="http://...addNewShirt.php">
+        <h2>Add a New Shirt to Inventory</h2>
+        <p>
+            <label for="id">ID:</label>
+            <input type="text" name="id" id="id">
+        </p>
+        <p>
+            <label for="price">price:</label>
+            <input type="text" name="price" id="price">
+        </p>
+        <p>
+            <label for="size">Size:</label>
+            <input type="text" name="size" id="size">
+        </p>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+
+    <!-- <form method="post" action="http://addNewItem.php">
+        <fieldset>
+            <legend style="color:rgb(76, 0, 255);font-size:30px">Item Order Form</legend>
+            <p>Are you adding a new comic book or tshirt?</p>
+
+            <h2>Add to Your Cart</h2>
+            <p>
+                <label for="itemid">Item ID:</label>
+                <input type="text" name="itemid" id="itemid">
+                <label for="qty">Quantity:</label>
+                <input type="text" name="qty" id="qty">
+            </p>
+
+            <h2>Contact Information</h2>
+            <p>Please enter the phone # or email that is on file.</p>
+            <p>
+                <label for="phone_email">Phone # or Email:</label>
+                <input type="text" name="phone_email" id="phone_email">
+            </p>
+        </fieldset>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form> -->
+</body>
+</html>
+
+<!-- used to switch between comic book form and tshirt form -->
+<script>
+    $("#book_form, #shirt_form").change(function(){
+    switch($(this).attr('id')){
+        case 'book_form':
+            $("#shirt_form").attr('');
+            $("#shirtform").hide(); 
+            $("#bookform").show();
+            break;
+        case 'shirt_form':
+            $("#book_form").attr('');
+            $("#bookform").hide(); 
+            $("#shirtform").show();
+            break;   
+    }   
+   
+});
+</script>

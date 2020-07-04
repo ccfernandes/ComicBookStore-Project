@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>New Customer Form</title>
+</head>
+<style>
+    input[type=text] {
+        width: 25%;
+        padding: 6px 20px;
+        box-sizing: border-box;
+    }
+    h1{
+        text-align: center;
+        background: #EEDFCC;
+    }
+    .top{
+        background: #EEDFCC;
+        text-align: center;
+    }
+    .display{
+        text-align: left;
+        border-style: solid;
+        /*width: 100%;*/
+        padding: 12px 20px;
+        margin: 8px 0;
+        background: #CBD4D6;
+    }
+    .forms{
+        text-align: left;
+        background-color: #EEDFCC;
+        /*width: 100%;*/
+        padding: 12px 20px;
+        margin: 8px 0;
+        /*box-sizing: border-box;*/
+    }
+    .button{
+      background: #D4D6CB;
+      border-style: solid;
+      border-color: #83989F;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+</style>
+<body>
+    <div class="top">
+        <h1>The LC Store</h1>
+        <div class="button">
+            <a href='main.html'>Home Page</a>
+        </div>
+    </div>
+    <!-- Add the correct path to the file addMovieReview.php -->
+
+    <!-- note the action url -->
+
+    <form method="post" class="forms" action="http://...addNewCustomer.php">
+        <fieldset>
+            <legend style="color:rgb(76, 0, 255);font-size:30px; text-align: center;">New Customer Form</legend>
+            <p>Please enter the following information to become a customer.</p>
+            <h2>Contact Information</h2>
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+            </p>
+            <p>
+                <label for="phone_email">Phone # OR Email:</label>
+                <input type="text" name="phone_email" id="phone_email">
+            </p>
+
+            <h2>Address</h2>
+            <p>
+                <label for="street">Street:</label>
+                <input type="text" name="street" id="street">
+            </p>
+            <p>
+                <label for="city">City:</label>
+                <input type="text" name="city" id="city">
+            </p>
+            <p>
+                <label for="state">State:</label>
+                <input type="text" name="state" id="state">
+            </p>
+            <p>
+                <label for="zip">Zipcode:</label>
+                <input type="text" name="zip" id="zip">
+            </p>
+        </fieldset>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+
+</html>
